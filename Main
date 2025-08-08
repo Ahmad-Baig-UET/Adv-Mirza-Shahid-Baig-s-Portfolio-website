@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>button</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      user-select: none;
+    }
+    #nameTag {
+      position: absolute;
+      padding: 7px 12px;
+      background: #31bcba;
+      color: white;
+      font-size: 12px;
+      border-radius: 10px;
+      cursor: grab;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    }
+    #nameTag:active {
+      cursor: grabbing;
+    }
+  </style>
+</head>
+<body>
+
+<div id="nameTag">Contact Adv Mirza Shahid Baig</div>
+
+<script>
+  const nameTag = document.getElementById('nameTag');
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  nameTag.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - nameTag.offsetLeft;
+    offsetY = e.clientY - nameTag.offsetTop;
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      nameTag.style.left = (e.clientX - offsetX) + 'px';
+      nameTag.style.top = (e.clientY - offsetY) + 'px';
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+</script>
+
+</body>
+</html>
