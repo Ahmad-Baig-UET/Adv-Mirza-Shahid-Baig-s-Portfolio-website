@@ -2,36 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>button</title>
+  <title>Button Page</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
-      background: #f0f0f0;
+      background-image: url('https://motionarray.imgix.net/motion-array-1186157-39R5pC9fu4-high_0013.jpg?w=660&q=60&fit=max&auto=format'); /* Replace this with your image URL */
+      background-size: cover;
+      background-position: center;
       display: flex;
       justify-content: center;
       align-items: center;
       font-family: Arial, sans-serif;
       user-select: none;
+      position: relative;
+      color: white;
     }
+
     #nameTag {
       position: absolute;
-      padding: 7px 12px;
+      padding: 1% 2%;
       background: #31bcba;
       color: white;
-      font-size: 12px;
-      border-radius: 10px;
+      font-size: 68%;
+      border-radius: 20%;
       cursor: grab;
       box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
     }
+
     #nameTag:active {
       cursor: grabbing;
     }
+
+    .info-box {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .info-box p {
+      margin: 0px 5% 9%;
+      font-size: 100%;
+    }
+
   </style>
 </head>
 <body>
 
 <div id="nameTag">Contact Adv Mirza Shahid Baig</div>
+
+<div class="info-box">
+  <p>Advocate Mirza Shahid Baig is a legal expert specializing in criminal and civil law. He is an Outstanding laywer with Many degrees. He has done L.L.B and L.L.M and he also has an M.phil. in Political Science and thriple masters.</p>
+  <p>For legal advice or representation, contact him at <div class="contact"><a href="gmail: shahidbeiglhr@gmail.com" style="color: #31bcba;">+92 318-4254742</a> or email at <a href="tel:+92 318-4254742" style="color: #31bcba;">shahidbeiglhr@gmail.com</a></div></p>
+</div>
 
 <script>
   const nameTag = document.getElementById('nameTag');
